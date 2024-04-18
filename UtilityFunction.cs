@@ -28,7 +28,21 @@ namespace GitHubCopilot
             }
             return false;
         }
-        /// 
+
+        // wap to find if number is palindrome or not 
+        public static bool IsPalindrome(int num)
+        {
+            int reversedNum = 0;
+            int originalNum = num;
+            while (num > 0)
+            {
+                int remainder = num % 10;
+                reversedNum = reversedNum * 10 + remainder;
+                num = num / 10;
+            }
+            return originalNum == reversedNum;
+        }
+
 
     }
 
